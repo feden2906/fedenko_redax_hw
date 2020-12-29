@@ -10,6 +10,7 @@ export default (state = initialState, action) => {
     case SET_PRODUCTS: {
       return {...state, products: action.payload}
     }
+
     default: {
       return state
     }
