@@ -3,10 +3,16 @@ import {services} from "../../services";
 
 const {productsService} = services
 
-export const setProducts = () => async (dispatch) => {
 
-    const response = await productsService.getProducts();
-    const json = await response.json()
-    dispatch({SET_PRODUCTS, payload: json})
 
+export const setProducts = () => (dispatch) => {
+    console.log(SET_PRODUCTS);
+    productsService
+        .getProducts()
+        .then(response => response.json())
+        .then(products => {
+
+            console.log(products);
+            dispatch({SET_PRODUCTS, payload: products})
+        })
 }

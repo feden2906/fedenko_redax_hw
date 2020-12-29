@@ -16,7 +16,8 @@ function App() {
   const dispatch  = useDispatch();
 
   useEffect(() => {
-    dispatch(setProducts())
+    // dispatch(setProducts)
+      setProducts(dispatch)
   }, [])
 
   return (

@@ -5,6 +5,7 @@ export class ProductsService {
     this.baseUrl = 'https://fakestoreapi.com/products'
   }
   getProducts(){
+
     return this.api.get(this.baseUrl)
   }
 }
