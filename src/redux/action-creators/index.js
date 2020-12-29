@@ -6,6 +6,7 @@ const {productsService} = services
 
 
 export const setProducts = () => (dispatch) => {
+    console.log(dispatch);
     console.log(SET_PRODUCTS);
     productsService
         .getProducts()
@@ -13,6 +14,6 @@ export const setProducts = () => (dispatch) => {
         .then(products => {
 
             console.log(products);
-            dispatch({SET_PRODUCTS, payload: products})
+            dispatch({type:SET_PRODUCTS, payload: products})
         })
 }
