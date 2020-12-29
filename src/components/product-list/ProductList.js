@@ -1,9 +1,11 @@
 import React from "react";
+import {ProductItem} from "../product-item";
 
-export const ProductList = () => {
+export const ProductList = ({products}) => {
+
     return (
         <div>
-              gbcey
+          {products.map(item => <ProductItem item={item} key={item.id}/>)}
         </div>
     );
 }

@@ -21,9 +21,8 @@ function App() {
 
   return (
       <div className="App">
-        {products.length}
         <Header/>
-        <ProductList/>
+        <ProductList products={products}/>
       </div>
   );
 }
